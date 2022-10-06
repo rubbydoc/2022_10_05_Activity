@@ -1,4 +1,4 @@
 public class Customer{
-    static String address;
+    static String password;
     static String name;
 }
