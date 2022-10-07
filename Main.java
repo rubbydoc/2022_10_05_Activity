@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static Customer<String,String> customer = new Customer<String,String>("rubby","doc123");
     public static void main(String[] args){
         System.out.println("How many objects you want to create?");
         int n = scanner.nextInt();
@@ -14,9 +13,13 @@ public class Main {
             String name = scanner.nextLine();
             System.out.println("Input password"+i+1+":");
             String password = scanner.nextLine();
-            array.add(new Customer<String,String>(name,password));
+            Customer<String,String> cust = new Customer<String,String>(name,password);
+            System.out.println(cust.getName());
+            System.out.println(cust.getPassword());
+            array.add(cust);
         }
 
+       
        
 
     }
